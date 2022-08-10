@@ -22,14 +22,18 @@ def winner(vote_number_list):
 print("*** Election ***")
 voter = int(input("Enter a number of voter(s) : "))
 number_votes = []
-if voter!=0:
+if voter>0:
     number_votes = list(map(int,input().strip().split()))[:voter]
 
     for i in list(number_votes):
         if 1> i or i >20:
             number_votes.remove(i)
-
-    winner(number_votes)
+    
+    voter = len(number_votes)
+    if(voter!=0):
+        winner(number_votes)
+    else:
+        print ("*** No Candidate Wins ***")
 
 else:
     print ("*** No Candidate Wins ***")
