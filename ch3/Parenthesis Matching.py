@@ -39,3 +39,6 @@ if not stack.isEmpty()and remain_close == False:
 
 elif remain_close:
     print(lis,"close paren excess")
+
+else:
+    print(lis, "MATCH")
